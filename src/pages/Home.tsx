@@ -103,24 +103,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">About Code Crafter</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Code Crafter is a premier 48-hour hackathon organized by the School of Engineering and Technology 
-              in collaboration with Techverse Club at CT University. We bring together passionate developers, 
-              designers, and innovators to create groundbreaking solutions that shape the future of technology.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              This year, we're focusing on emerging technologies including AI/ML, Blockchain, IoT, and Web3. 
-              Participants will have access to cutting-edge tools, expert mentorship, and a platform to showcase 
-              their innovations to industry leaders and potential investors.
-            </p>
-          </div>
-        </div>
-      </section>
+     
 
       {/* Features Section */}
       <section className="py-20 bg-background">

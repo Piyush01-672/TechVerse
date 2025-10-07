@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
-import universityLogo from "@/assets/university-logo.jpg";
+import universityLogo from "@/assets/univeee-logo.png";
 import techverseLogo from "@/assets/techverse-logo.jpg";
 
 const Footer = () => {
@@ -12,11 +12,12 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img src={universityLogo} alt="University" className="h-12 w-12 rounded-full" />
+              <span className="text-black font-bold text-xl">×</span>
               <img src={techverseLogo} alt="Techverse" className="h-12 w-12 rounded-full" />
             </div>
-            <h3 className="text-lg font-bold text-foreground">Code Crafter</h3>
+            <h3 className="text-2xl font-bold text-foreground">Tech Verse</h3>
             <p className="text-sm text-muted-foreground">
-              A premier hackathon organized by School of Engineering and Technology & Techverse Club at CT University.
+             Official tech club of CT University, fostering innovation, coding, and collaboration among students through workshops, hackathons, and projects.
             </p>
           </div>
 
@@ -47,7 +48,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={18} className="flex-shrink-0 text-primary" />
-                <span>codecrafter@ctuniversity.edu</span>
+                <span>techverse@ctuniversity.edu</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone size={18} className="flex-shrink-0 text-primary" />
@@ -60,20 +61,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-foreground">Follow Us</h4>
             <div className="flex gap-3">
-              <a
-                href="#"
-                className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-all"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-all"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
+              
               <a
                 href="#"
                 className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-all"
@@ -105,7 +93,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Code Crafter Hackathon. All rights reserved. Organized by School of Engineering and Technology & Techverse Club, CT University.
+            © {new Date().getFullYear()} Tech Verse club. All rights reserved. by School of Engineering and Technology , CT University.
           </p>
         </div>
       </div>

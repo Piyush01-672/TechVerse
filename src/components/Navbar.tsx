@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import universityLogo from "@/assets/university-logo.jpg";
+import universityLogo from "@/assets/univeee-logo.png";
 import techverseLogo from "@/assets/techverse-logo.jpg";
 
 const Navbar = () => {
@@ -25,20 +25,21 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <Link to="/" className="flex items-center gap-3 group relative">
             <img 
-              src={universityLogo} 
+              src={universityLogo}
               alt="School of Engineering" 
               className="h-12 w-12 rounded-full object-cover transition-transform group-hover:scale-110"
             />
-            <img 
+             <span className="text-black font-bold text-xl">×</span>          
+                <img 
               src={techverseLogo} 
               alt="Techverse Club" 
               className="h-12 w-12 rounded-full object-cover transition-transform group-hover:scale-110"
             />
             <div className="hidden md:block">
-              <h1 className="text-xl font-bold text-foreground">Code Crafter</h1>
-              <p className="text-xs text-muted-foreground">Hackathon 2025</p>
+              <h1 className="text-xl font-bold text-foreground">Tech Verse</h1>
+              <p className="text-xs text-muted-foreground ml-1">Innovation Hub</p>
             </div>
           </Link>
 

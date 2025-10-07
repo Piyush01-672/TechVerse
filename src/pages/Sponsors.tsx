@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import universityLogo from "@/assets/university-logo.jpg";
+import universityLogo from "@/assets/univeee-logo.png";
 import techverseLogo from "@/assets/techverse-logo.jpg";
 
 const Sponsors = () => {
