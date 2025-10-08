@@ -22,9 +22,17 @@ const queryClient = new QueryClient();
 const AppContent: React.FC = () => {
   const location = useLocation();
   const [loading, setLoading] = useState<boolean>(false);
+  const [initialLoad, setInitialLoad] = useState<boolean>(true); // track first render
 
   useEffect(() => {
-    setLoading(true); // show loader on route change
+    if (initialLoad) {
+      // skip loader on initial mount
+      setInitialLoad(false);
+      return;
+    }
+
+    // show loader on route changes only
+    setLoading(true);
     const timer = setTimeout(() => setLoading(false), 500); // adjust duration
     return () => clearTimeout(timer);
   }, [location.pathname]);
@@ -44,6 +52,7 @@ const AppContent: React.FC = () => {
     </>
   );
 };
+
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
