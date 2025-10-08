@@ -37,7 +37,7 @@ const Gallery = () => {
         {/* Centered content */}
         <div className="container mx-auto px-4 text-center relative z-10">
           <span className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-medium backdrop-blur-md border border-white/20 shadow-sm mb-6 tracking-widest animate-fade-in">
-            🌟 Hackathon Highlights
+            🌟 Highlights
           </span>
           <h1 className="text-7xl md:auto  font-extrabold pb-3 mb-8 animate-fade-in-up bg-gradient-to-r from-[#FFD54F] via-white to-[#4676E6] bg-clip-text text-transparent drop-shadow-xl">
             Event Gallery
@@ -47,12 +47,12 @@ const Gallery = () => {
             <span className="font-semibold text-[#FFD54F]">
               excitement and innovation{" "}
             </span>
-             of the{" "}
+             of our previous{" "}
             <span className="font-semibold text-[#B16FFF]">
-              Code Crafter Hackathon
+              Events
             </span>{" "}
-            through our event highlights.
-          </p>
+            through our highlights. &nbsp;
+          </p><br />
         </div>
       </section>
 
@@ -64,7 +64,7 @@ const Gallery = () => {
               Event Recap
             </h2>
             <p className="text-lg text-muted-foreground">
-              Watch the highlights from our amazing hackathon
+              Watch the highlights from our previous Events
             </p>
           </div>
 
@@ -79,7 +79,7 @@ const Gallery = () => {
                     Video Coming Soon
                   </h3>
                   <p className="text-muted-foreground">
-                    Event recap video will be available after the hackathon
+                    Event recap video will be available soon.
                   </p>
                 </div>
               </div>

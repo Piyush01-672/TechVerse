@@ -19,9 +19,9 @@ const GallerySlider = ({ galleryItems }) => {
       <div className="container mx-auto px-4 relative group">
         <button
           onClick={() => scroll("left")}
-          className="absolute left-2 top-1/2 z-10 -translate-y-1/2 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          &lt;
+          <span className="relative -top-[1px]">&lt;</span>
         </button>
 
         <div
@@ -30,8 +30,8 @@ const GallerySlider = ({ galleryItems }) => {
         >
           {galleryItems.map(
             (
-              item,
-              index // Added index here
+              item
+              // index // Added index here
             ) => (
               <div
                 key={item.id}
@@ -39,9 +39,9 @@ const GallerySlider = ({ galleryItems }) => {
               >
                 <Card
                   className="group/card relative overflow-hidden cursor-pointer animate-scale-in border-primary/20"
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  // style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
+                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 relative overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -74,9 +74,9 @@ const GallerySlider = ({ galleryItems }) => {
 
         <button
           onClick={() => scroll("right")}
-          className="absolute right-2 -translate-y-1/2 top-1/2 z-10 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          &gt;
+          <span className="relative -top-[1px]">&gt;</span>
         </button>
       </div>
     </section>
