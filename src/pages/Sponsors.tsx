@@ -230,7 +230,7 @@ const Sponsors = () => {
             </Badge>
             <p className="text-lg text-muted-foreground">
               {/* Technical communities supporting our mission */}
-              Coming Soon....
+              Coming Soon...
             </p>
           </div>
 
