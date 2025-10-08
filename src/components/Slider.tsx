@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { Card } from "@/components/ui/card"; // Add this import
-import { Badge } from "@/components/ui/badge"; // Add this import
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const GallerySlider = ({ galleryItems }) => {
   const scrollRef = useRef(null);
@@ -42,6 +42,11 @@ const GallerySlider = ({ galleryItems }) => {
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="aspect-video bg-gradient-to-br from-primary/20 to-accent/20 relative overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary to-primary-glow group-hover/card:opacity-80 opacity-100 transition-opacity">
                       <div className="text-center text-white p-6">
                         <h3 className="text-2xl font-bold mb-2">
@@ -55,8 +60,10 @@ const GallerySlider = ({ galleryItems }) => {
                     </div>
                     <div className="absolute inset-0 bg-black/20 group-hover/card:opacity-0 opacity-100 transition-opacity" />
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 text-white text-sm p-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-200">
-                    <p className="text-center">{item.description ||"Event description will appear here on hover"}
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/50 text-white text-sm p-4 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 delay-200">
+                    <p className="text-center">
+                      {item.description ||
+                        "Event description will appear here on hover"}
                     </p>
                   </div>
                 </Card>

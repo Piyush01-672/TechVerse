@@ -4,7 +4,7 @@ import GallerySlider from "@/components/Slider";
 const Gallery = () => {
   // Placeholder gallery items - you can replace with actual event photos
   const galleryItems = [
-    { id: 1, title: "Opening Ceremony", category: "Event", date: "Day 1" },
+    { id: 1, title: "Opening Ceremony", category: "Event", date: "Day 1", image: "https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=600&quality=80", description: "Highlights from the opening ceremony" },
     { id: 2, title: "Teams at Work", category: "Coding", date: "Day 1" },
     { id: 3, title: "Mentorship Session", category: "Workshop", date: "Day 1" },
     { id: 4, title: "Networking Break", category: "Social", date: "Day 2" },
@@ -30,7 +30,7 @@ const Gallery = () => {
           {/* Accent purple oval (up/down) */}
           <div className="absolute top-1/2 right-40 w-16 h-8 bg-[#B16FFF]/70 rounded-3xl animate-bounce-x blur-md"></div>
           {/* Small accent dots */}
-          <div className="absolute top-8 right-2 w-3 h-3 bg-[#F56060]/80 rounded-full animate-ping"></div>
+          <div className="absolute top-8 right-2 w-5 h-5 bg-[#F56060]/80 rounded-full animate-bounce"></div>
           <div className="absolute bottom-8 left-8 w-5 h-5 bg-[#36C2A3]/70 rounded-full animate-bounce"></div>
         </div>
 
@@ -40,12 +40,12 @@ const Gallery = () => {
             🌟 Hackathon Highlights
           </span>
           <h1 className="text-7xl md:auto  font-extrabold pb-3 mb-8 animate-fade-in-up bg-gradient-to-r from-[#FFD54F] via-white to-[#4676E6] bg-clip-text text-transparent drop-shadow-xl">
-            Event Gallery {""}
+            Event Gallery
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in leading-relaxed">
             Relive the{" "}
             <span className="font-semibold text-[#FFD54F]">
-              excitement and innovation 
+              excitement and innovation{" "}
             </span>
              of the{" "}
             <span className="font-semibold text-[#B16FFF]">
