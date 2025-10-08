@@ -1,9 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Calendar, MapPin, Users, Trophy, Code, Zap } from "lucide-react";
+import { Card, CardContent} from "@/components/ui/card";
+import { Calendar, MapPin, Zap, } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 import { Typewriter } from "react-simple-typewriter";
+import { Code, Trophy, Users, Sparkles } from "lucide-react";
+import TechverseLogo from "@/assets/techverse-logo.jpg"; 
+import { Leaf } from "lucide-react";
+
 
 const Home = () => {
   const stats = [
@@ -13,33 +17,28 @@ const Home = () => {
     { label: "Mentors", value: "20+", icon: Zap },
   ];
 
-  const features = [
+ const features = [
     {
-      title: "Innovation Hub",
-      description:
-        "Build cutting-edge solutions to real-world problems with access to latest technologies.",
       icon: Code,
+      title: "Workshops & Training",
+      description: "Regular hands-on workshops on latest technologies, programming languages, and development tools.",
     },
     {
-      title: "Expert Mentorship",
-      description:
-        "Learn from industry professionals and experienced developers throughout the event.",
-      icon: Users,
-    },
-    {
-      title: "Networking",
-      description:
-        "Connect with fellow developers, innovators, and potential collaborators.",
-      icon: Zap,
-    },
-    {
-      title: "Amazing Prizes",
-      description:
-        "Win exciting prizes, certificates, and opportunities to showcase your talent.",
       icon: Trophy,
+      title: "Hackathons & Competitions",
+      description: "Participate in exciting hackathons and coding competitions to showcase your skills.",
+    },
+    {
+      icon: Users,
+      title: "Networking Events",
+      description: "Connect with industry professionals, alumni, and fellow tech enthusiasts.",
+    },
+    {
+      icon: Sparkles,
+      title: "Innovation Projects",
+      description: "Work on real-world projects and bring your innovative ideas to life.",
     },
   ];
-
   return (
     <div className="min-h-screen">
 
@@ -88,10 +87,9 @@ const Home = () => {
             {/* Date & Location */}
             <div className="flex flex-wrap items-center justify-center gap-6 text-white/90 mt-6">
               <div className="flex items-center gap-2">
-                <Calendar size={20} />
-                <span className="font-medium">March 15–17, 2025</span>
+                
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 mr-10">
                 <MapPin size={20} />
                 <span className="font-medium">CT University, Punjab</span>
               </div>
@@ -103,14 +101,14 @@ const Home = () => {
                 size="lg"
                 className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-10 py-6 text-lg shadow-lg shadow-secondary/40 hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transition-all duration-300"
               >
-                Register Now
+                Join now
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="bg-white/10 hover:bg-white/20 text-white border-white/30 px-10 py-6 text-lg backdrop-blur-sm hover:shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all duration-300"
               >
-                Learn More
+                About us
               </Button>
             </div>
           </div>
@@ -124,65 +122,104 @@ const Home = () => {
         />
       </section>
 
-      {/* ✅ STATS SECTION */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <Card
-                  key={index}
-                  className="p-8 text-center hover:shadow-glow transition-all duration-300 animate-scale-in border-primary/20"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <Icon className="w-12 h-12 mx-auto mb-4 text-primary" />
-                  <h3 className="text-4xl font-bold text-foreground mb-2">
-                    {stat.value}
-                  </h3>
-                  <p className="text-muted-foreground font-medium">{stat.label}</p>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+
+
+     {/* { MY TECHVERSE } */}
+<section className="relative py-10 bg-gradient-to-b from-blue-50 via-blue-100 to-gray-100 overflow-hidden ">
+  {/* Heading */}
+ <h2 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-12 mt-6 tracking-tight leading-tight drop-shadow-lg bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+  Welcome to Tech Verse
+</h2>
+
+
+
+  {/* Center guiding line (shifted slightly downward to cross logo diameter) */}
+  <div className="absolute top-[43%] left-0 w-full h-px bg-gradient-to-r from-transparent via-green-400 to-transparent z-0"></div>
+
+  {/* Left olive branch (mirrored symmetry) */}
+  <div className="absolute top-[43%] left-0 flex justify-end items-center gap-1 transform -translate-y-1/2 w-[calc(50%-5rem)] pr-0 z-0">
+    {[...Array(11)].map((_, i) => (
+      <svg
+        key={i}
+        className="w-5 h-5 text-green-500 transform rotate-[15deg]"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M12 2C8 8 2 12 2 12s6 4 10 10c4-6 10-10 10-10S16 8 12 2z" />
+      </svg>
+    ))}
+  </div>
+
+  {/* Right olive branch (mirrored and inverted) */}
+  <div className="absolute top-[43%] right-0 flex justify-start items-center gap-1 transform -translate-y-1/2 w-[calc(50%-5rem)] pl-0 z-0">
+    {[...Array(11)].map((_, i) => (
+      <svg
+        key={i}
+        className="w-5 h-5 text-green-500 transform -rotate-[15deg]"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path d="M12 2C8 8 2 12 2 12s6 4 10 10c4-6 10-10 10-10S16 8 12 2z" />
+      </svg>
+    ))}
+  </div>
+
+  {/* Centered Logo (slightly overlapping line) */}
+ <div className="flex justify-center items-center w-full relative z-10 mb-6 -translate-y-1">
+  <div className="w-64 h-64 rounded-full overflow-hidden flex justify-center items-center bg-transparent">
+    <img
+      src={TechverseLogo}
+      alt="Logo"
+      className="w-full h-full object-contain"
+    />
+  </div>
+</div>
+
+
+  {/* Description */}
+  <p className="text-center max-w-3xl mx-auto text-base sm:text-lg md:text-xl lg:text-2xl text-blue-900 font-medium tracking-wide leading-relaxed md:leading-loose mt-12">
+  At <span className="font-extrabold text-blue-700">Tech Verse</span>, we believe in empowering innovation through collaboration. 
+  Our platform brings together bright minds from around the world to share ideas, 
+  explore emerging technologies, and transform creative visions into impactful realities. 
+  Join us as we build a vibrant community where <span className="font-semibold text-blue-600">technology meets imagination</span>.
+</p>
+
+</section>
+    
 
       {/* ✅ FEATURES SECTION */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Why Join Code Crafter?
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Experience the ultimate hackathon with world-class facilities and opportunities.
-            </p>
-          </div>
+      <section className="container mx-auto px-4 py-20 ">
+    <h2 className="text-8xl md:text-6xl lg:text-7xl font-extrabold text-center mb-12 -mt-10 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-600 bg-clip-text text-transparent tracking-wider ">
+  What We Offer
+</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Card
-                  key={index}
-                  className="p-6 hover:shadow-glow transition-all duration-300 group animate-fade-in border-primary/20"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="w-8 h-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </Card>
-              );
-            })}
-          </div>
+
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 mt-6">
+  {features.map((feature, index) => {
+    const Icon = feature.icon;
+    return (
+      <div
+        key={index}
+        className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(59,130,246,0.6)] hover:-translate-y-2 border border-blue-500/20"
+      >
+        <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
+          <Icon className="w-6 h-6 text-blue-600" />
         </div>
-      </section>
+        <h3 className="text-xl font-semibold text-foreground mb-2">
+          {feature.title}
+        </h3>
+        <p className="text-muted-foreground">{feature.description}</p>
+      </div>
+    );
+  })}
+</div>
+
+    </section>
+
 
       {/* ✅ CTA SECTION */}
-      <section className="py-20 bg-gradient-to-br from-primary to-primary-glow relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-500 to-cyan-400 relative overflow-hidden
+">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20" />
 
         <div className="container mx-auto px-4 relative z-10">
@@ -195,20 +232,13 @@ const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button
-                size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-8 py-6 text-lg shadow-accent"
+                size="lg" 
+                variant="secondary"
+                className="gap-2 hover:scale-105 transition-transform"
               >
-                Register Your Team
+                Get started today
               </Button>
-              <Link to="/contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/10 hover:bg-white/20 text-white border-white/30 px-8 py-6 text-lg backdrop-blur-sm"
-                >
-                  Become a Sponsor
-                </Button>
-              </Link>
+              
             </div>
           </div>
         </div>

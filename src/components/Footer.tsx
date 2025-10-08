@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 import universityLogo from "@/assets/univeee-logo.png";
 import techverseLogo from "@/assets/techverse-logo.jpg";
+import { IoRocket } from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img src={universityLogo} alt="University" className="h-12 w-12 rounded-full" />
-              <span className="text-black font-bold text-xl">×</span>
+               <IoRocket className="text-[1.7rem] text-blue-500 drop-shadow-[0_0_8px_#00C6FF]" />
               <img src={techverseLogo} alt="Techverse" className="h-12 w-12 rounded-full" />
             </div>
             <h3 className="text-2xl font-bold text-foreground">Tech Verse</h3>
@@ -91,11 +92,12 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Tech Verse club. All rights reserved. by School of Engineering and Technology , CT University.
-          </p>
-        </div>
+       <div className="mt-3 pt-2 border-t border-border text-center">
+  <p className="text-sm text-muted-foreground mt-2 -pt-6 -mb-">
+    © {new Date().getFullYear()} Tech Verse club. All rights reserved. by School of Engineering and Technology, CT University.
+  </p>
+</div>
+
       </div>
     </footer>
   );
