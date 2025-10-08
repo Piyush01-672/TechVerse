@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import universityLogo from "@/assets/univeee-logo.png";
 import techverseLogo from "@/assets/techverse-logo.jpg";
+import { IoRocket } from "react-icons/io5";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,8 +32,8 @@ const Navbar = () => {
               alt="School of Engineering" 
               className="h-12 w-12 rounded-full object-cover transition-transform group-hover:scale-110"
             />
-             <span className="text-black font-bold text-xl">×</span>          
-                <img 
+            <IoRocket className="text-[1.7rem] text-blue-500 drop-shadow-[0_0_8px_#00C6FF]" />
+            <img 
               src={techverseLogo} 
               alt="Techverse Club" 
               className="h-12 w-12 rounded-full object-cover transition-transform group-hover:scale-110"
@@ -62,10 +63,17 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Button variant="default" className="bg-gradient-to-r from-primary to-primary-glow shadow-lg">
-              Register Now
-            </Button>
-          </div>
+  <Button
+    variant="default"
+    className="bg-gradient-to-r from-primary to-primary-glow shadow-lg 
+               transition-transform transform hover:scale-105 
+               hover:from-blue-500 hover:to-blue-700
+               active:scale-95 active:from-blue-600 active:to-blue-800"
+  >
+    Register Now
+  </Button>
+</div>
+
 
           {/* Mobile Menu Button */}
           <button
