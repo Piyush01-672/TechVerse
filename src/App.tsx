@@ -20,24 +20,32 @@ const queryClient = new QueryClient();
 
 const AppContent: React.FC = () => {
   const location = useLocation();
-  const [loading, setLoading] = useState<boolean>(false);
-  const [initialLoad, setInitialLoad] = useState<boolean>(true); // track first render
+  const [loading, setLoading] = useState<boolean>(true);
 
-  // 🔁 Show loader only when switching routes (not on initial load)
+  // ✅ Show loader until page + assets are fully loaded
   useEffect(() => {
-    if (initialLoad) {
-      setInitialLoad(false);
-      return;
+    const handleLoad = () => {
+      setLoading(false);
+    };
+
+    // When the page is already loaded (like fast navigation)
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
     }
 
-    setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 500); // adjust duration
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
 
-  // ⬆️ Scroll to top on every route change
+  // ✅ On route change: scroll to top + show loader briefly while switching
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setLoading(true);
+
+    // Simulate small delay just for smooth transition
+    const timer = setTimeout(() => setLoading(false), 600);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
