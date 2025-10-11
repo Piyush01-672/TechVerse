@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
 import universityLogo from "@/assets/univeee-logo.png";
 import techverseLogo from "@/assets/techverse-logo.jpg";
-import { IoRocket } from "react-icons/io5";
+import { IoLogoWhatsapp, IoRocket } from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-foreground">Quick Links</h4>
             <ul className="space-y-2">
-              {["Home", "Gallery", "Team", "Sponsors", "Winners", "Contact"].map((item) => (
+              {["Home", "Gallery", "Team", "Sponsors" , "Contact"].map((item) => (
                 <li key={item}>
                   <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Mail size={18} className="flex-shrink-0 text-primary" />
-                <span>techverse@ctuniversity.edu</span>
+                <span>techverse@ctuniversity.in</span>
               </li>
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Phone size={18} className="flex-shrink-0 text-primary" />
@@ -64,14 +64,14 @@ const Footer = () => {
             <div className="flex gap-3">
               
               <a
-                href="#"
+                href="https://www.instagram.com/tech.versectu/"
                 className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-all"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/techverse-club-ct-university/"
                 className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-all"
                 aria-label="LinkedIn"
               >
@@ -83,6 +83,13 @@ const Footer = () => {
                 aria-label="GitHub"
               >
                 <Github size={20} />
+              </a>
+              <a
+                href="https://chat.whatsapp.com/IiClyLPXlooJZWlJ66CnlN?mode=wwt"
+                className="p-2 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg transition-all"
+                aria-label="GitHub"
+              >
+                <IoLogoWhatsapp size={20} />
               </a>
             </div>
             <p className="text-sm text-muted-foreground mt-4">

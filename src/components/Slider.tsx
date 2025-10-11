@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, ArrowRight} from "lucide-react";
 
 const GallerySlider = ({ galleryItems }) => {
   const scrollRef = useRef(null);
@@ -21,7 +22,7 @@ const GallerySlider = ({ galleryItems }) => {
           onClick={() => scroll("left")}
           className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <span className="relative -top-[1px]">&lt;</span>
+          <ArrowLeft size={20} />
         </button>
 
         <div
@@ -76,7 +77,7 @@ const GallerySlider = ({ galleryItems }) => {
           onClick={() => scroll("right")}
           className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-2xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          <span className="relative -top-[1px]">&gt;</span>
+          <ArrowRight size={20} />
         </button>
       </div>
     </section>

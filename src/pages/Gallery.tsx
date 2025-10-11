@@ -68,7 +68,7 @@ const Gallery = () => {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          {/* <div className="max-w-4xl mx-auto">
             <Card className="overflow-hidden border-primary/20">
               <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
                 <div className="text-center p-8">
@@ -84,9 +84,9 @@ const Gallery = () => {
                 </div>
               </div>
             </Card>
-          </div>
+          </div>*/}
         </div>
-      </section>
+      </section> 
 
       {/* Gallery Grid */}
       <GallerySlider galleryItems={galleryItems} />

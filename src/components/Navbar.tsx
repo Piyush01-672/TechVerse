@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: "Gallery", path: "/gallery" },
     { name: "Team", path: "/team" },
     { name: "Sponsors", path: "/sponsors" },
-    { name: "Winners", path: "/winners" },
+    // { name: "Winners", path: "/winners" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -52,7 +52,7 @@ const Navbar = () => {
                 to={item.path}
                 className={`px-4 py-2 rounded-lg font-medium transition-all ${
                   isActive(item.path)
-                    ? "bg-primary text-primary-foreground"
+                    ? "bg-gradient-to-br from-[#252D6F] to-[#4676E6] text-primary-foreground"
                     : "text-foreground hover:bg-muted"
                 }`}
               >
@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="hidden lg:block">
   <Button
     variant="default"
-    className="bg-gradient-to-r from-primary to-primary-glow shadow-lg 
+    className="bg-gradient-to-br from-[#252D6F] to-[#4676E6] shadow-lg 
                transition-transform transform hover:scale-105 
                hover:from-blue-500 hover:to-blue-700
                active:scale-95 active:from-blue-600 active:to-blue-800"

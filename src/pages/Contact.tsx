@@ -119,9 +119,7 @@ const Contact = () => {
                         Email Us
                       </h3>
                       <p className="text-muted-foreground">
-                        codecrafter@ctuniversity.edu
-                        <br />
-                        techverse.club@ctuniversity.edu
+                        techverse@ctuniversity.in
                       </p>
                     </div>
                   </div>
@@ -238,8 +236,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-br from-[#252D6F] to-[#4676E6] hover:opacity-90"
-                >
+                  className="w-full bg-gradient-to-br from-[#252D6F] to-[#4676E6] hover:opacity-90">
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>
