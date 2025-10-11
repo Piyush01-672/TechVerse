@@ -18,23 +18,26 @@ import Loading from "./components/Loading";
 
 const queryClient = new QueryClient();
 
-// Wrap Routes with Loader logic
 const AppContent: React.FC = () => {
   const location = useLocation();
   const [loading, setLoading] = useState<boolean>(false);
   const [initialLoad, setInitialLoad] = useState<boolean>(true); // track first render
 
+  // 🔁 Show loader only when switching routes (not on initial load)
   useEffect(() => {
     if (initialLoad) {
-      // skip loader on initial mount
       setInitialLoad(false);
       return;
     }
 
-    // show loader on route changes only
     setLoading(true);
     const timer = setTimeout(() => setLoading(false), 500); // adjust duration
     return () => clearTimeout(timer);
+  }, [location.pathname]);
+
+  // ⬆️ Scroll to top on every route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname]);
 
   return (
@@ -53,8 +56,7 @@ const AppContent: React.FC = () => {
   );
 };
 
-
-const App = () => (
+const App: React.FC = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
